@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Sinh Viên</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Quản Lý Sinh Viên</h1>
+        </header>
+
+        <div class="stats">
+            <div class="stat-box">
+                <h3>Tổng Sinh Viên</h3>
+                <p>1,234</p>
+            </div>
+            <div class="stat-box">
+                <h3>Giảng Viên</h3>
+                <p>86</p>
+            </div>
+            <div class="stat-box">
+                <h3>Khóa Học</h3>
+                <p>45</p>
+            </div>
+            <div class="stat-box">
+                <h3>Sách Thư Viện</h3>
+                <p>12,543</p>
+            </div>
+        </div>
+
+        <div class="card" id="formSection">
+            <h2>Thêm Sinh Viên Mới</h2>
+            <form id="studentForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Mã Sinh Viên *</label>
+                        <input type="text" required placeholder="VD: SV001234">
+                    </div>
+                    <div class="form-group">
+                        <label>Họ và Tên *</label>
+                        <input type="text" required placeholder="Nguyễn Văn A">
+                    </div>
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" required placeholder="student@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Số Điện Thoại *</label>
+                        <input type="tel" required placeholder="0123456789">
+                    </div>
+                    <div class="form-group">
+                        <label>Chuyên Ngành *</label>
+                        <select required>
+                            <option value="">Chọn chuyên ngành</option>
+                            <option>Khoa Học Máy Tính</option>
+                            <option>Công Nghệ Thông Tin</option>
+                            <option>Kỹ Thuật</option>
+                            <option>Kinh Doanh</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Năm Học *</label>
+                        <select required>
+                            <option value="">Chọn năm học</option>
+                            <option>Năm 1</option>
+                            <option>Năm 2</option>
+                            <option>Năm 3</option>
+                            <option>Năm 4</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="btn-actions">
+                    <button type="reset" class="btn btn-secondary">Xóa</button>
+                    <button type="submit" class="btn btn-primary">Thêm Sinh Viên</button>
+                    <button type="button" class="btn btn-primary" onclick="toggleView()">Xem Danh Sách</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="card hidden" id="listSection">
+            <h2>Danh Sách Sinh Viên</h2>
+            <div class="btn-actions">
+                <button class="btn btn-primary" onclick="toggleView()">➕ Thêm Mới</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mã SV</th>
+                        <th>Họ Tên</th>
+                        <th>Email</th>
+                        <th>Chuyên Ngành</th>
+                        <th>Năm Học</th>
+                        <th>Trạng Thái</th>
+                        <th>Thao Tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SV001234</td>
+                        <td>Nguyễn Văn A</td>
+                        <td>nguyenvana@email.com</td>
+                        <td>Khoa Học Máy Tính</td>
+                        <td>Năm 3</td>
+                        <td><span class="status">Đang học</span></td>
+                        <td>
+                            <button class="action-btn btn-view">Xem</button>
+                            <button class="action-btn btn-edit">Sửa</button>
+                            <button class="action-btn btn-delete">Xóa</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SV001235</td>
+                        <td>Trần Thị B</td>
+                        <td>tranthib@email.com</td>
+                        <td>Công Nghệ Thông Tin</td>
+                        <td>Năm 2</td>
+                        <td><span class="status">Đang học</span></td>
+                        <td>
+                            <button class="action-btn btn-view">Xem</button>
+                            <button class="action-btn btn-edit">Sửa</button>
+                            <button class="action-btn btn-delete">Xóa</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SV001236</td>
+                        <td>Lê Văn C</td>
+                        <td>levanc@email.com</td>
+                        <td>Thiết Kế</td>
+                        <td>Năm 1</td>
+                        <td><span class="status">Đang học</span></td>
+                        <td>
+                            <button class="action-btn btn-view">Xem</button>
+                            <button class="action-btn btn-edit">Sửa</button>
+                            <button class="action-btn btn-delete">Xóa</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function toggleView() {
+            const formSection = document.getElementById('formSection');
+            const listSection = document.getElementById('listSection');
+            
+            formSection.classList.toggle('hidden');
+            listSection.classList.toggle('hidden');
+        }
+
+        document.getElementById('studentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thêm sinh viên thành công!');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ - Website</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                 <img src="../assets/image/logo/FPT_Polytechnic.png" alt="logo FPT Polytechnic">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="about.html">Giới Thiệu</a></li>
+                <li><a href="activity.html">Hoạt Động</a></li>
+                <li><a href="english_club.html">Câu Lạc Bộ</a></li>
+                <li><a href="laboratory.html">Phòng Lab</a></li>
+                <li><a href="library.html">Thư Viện</a></li>
+                <li><a href="contact.html" class="active">Liên Hệ</a></li>
+                <li><a href="login.html" class="btn-login">Đăng Nhập</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <h1 class="fade-in">Liên Hệ</h1>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="icon">📍</div>
+                    <h3>Địa Chỉ</h3>
+                    <p>123 Đường ABC, Quận XYZ<br>Thành phố Hồ Chí Minh, Việt Nam</p>
+                </div>
+
+                <div class="feature-card fade-in-delay">
+                    <div class="icon">📞</div>
+                    <h3>Điện Thoại</h3>
+                    <p>Hotline: (028) 1234 5678<br>Fax: (028) 8765 4321</p>
+                </div>
+
+                <div class="feature-card fade-in-delay-2">
+                    <div class="icon">✉️</div>
+                    <h3>Email</h3>
+                    <p>info@mywebsite.edu.vn<br>support@mywebsite.edu.vn</p>
+                </div>
+            </div>
+
+            <div class="form-container fade-in">
+                <h2 style="text-align: center; margin-bottom: 2rem; color: var(--text-dark);">Gửi Tin Nhắn</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Họ và Tên *</label>
+                        <input type="text" id="name" name="name" required placeholder="Nhập họ và tên của bạn">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="example@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Số Điện Thoại</label>
+                        <input type="tel" id="phone" name="phone" placeholder="0123 456 789">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Chủ Đề</label>
+                        <select id="subject" name="subject">
+                            <option value="">Chọn chủ đề</option>
+                            <option value="general">Câu hỏi chung</option>
+                            <option value="admission">Tuyển sinh</option>
+                            <option value="library">Thư viện</option>
+                            <option value="lab">Phòng thí nghiệm</option>
+                            <option value="other">Khác</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Nội Dung *</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Nhập nội dung tin nhắn của bạn..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Gửi Tin Nhắn</button>
+                </form>
+            </div>
+
+            <div class="content-card fade-in-delay" style="margin-top: 3rem;">
+                <h2>Bản Đồ</h2>
+                <div class="image-placeholder-contact-map" style="height: 400px; margin-top: 1rem;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7837.932078298888!2d106.59621655941008!3d10.813910850666923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b953efb20ef%3A0x41ed21a46cbdc6c!2zRlBUIFBvbHlTY2hvb2wgLSBDxqEgc-G7nyBCw6xuaCBUw6Ju!5e0!3m2!1sen!2s!4v1770006242915!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 MyWebsite. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i>📘</i></a>
+                <a href="#"><i>📷</i></a>
+                <a href="#"><i>🐦</i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/script.js"></script>
+</body>
+</html>

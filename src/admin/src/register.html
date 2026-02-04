@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Admin - MyWebsite</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../assets/register.css">
+</head>
+<body>
+    <div class="admin-register-wrapper">
+        <div class="register-container">
+            <div class="register-card">
+                <div class="register-header">
+                    <div class="admin-icon">👨‍💼</div>
+                    <h1>Đăng Ký Admin</h1>
+                    <p>Tạo tài khoản quản trị viên mới</p>
+                </div>
+
+                <form id="adminRegisterForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">Họ *</label>
+                            <input type="text" id="firstName" name="firstName" required placeholder="Nguyễn">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Tên *</label>
+                            <input type="text" id="lastName" name="lastName" required placeholder="Văn A">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="admin@example.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="username">Tên Đăng Nhập *</label>
+                        <input type="text" id="username" name="username" required placeholder="Chọn tên đăng nhập">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="password">Mật Khẩu *</label>
+                            <input type="password" id="password" name="password" required placeholder="Tối thiểu 8 ký tự">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Xác Nhận Mật Khẩu *</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Nhập lại mật khẩu">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="role">Vai Trò *</label>
+                        <select id="role" name="role" required>
+                            <option value="">Chọn vai trò</option>
+                            <option value="superadmin">Super Admin</option>
+                            <option value="admin">Admin</option>
+                            <option value="moderator">Moderator</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Số Điện Thoại</label>
+                        <input type="tel" id="phone" name="phone" placeholder="0123 456 789">
+                    </div>
+
+                    <div class="form-group terms-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="terms" required>
+                            <span>Tôi đồng ý với điều khoản và chính sách bảo mật</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-register">Đăng Ký</button>
+                </form>
+
+                <div class="register-footer">
+                    <p>Đã có tài khoản? <a href="login.html">Đăng nhập ngay</a></p>
+                    <a href="../index.html" class="back-link">← Quay lại trang chủ</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="register-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </div>
+
+    <script>
+        const adminRegisterForm = document.getElementById('adminRegisterForm');
+        
+        adminRegisterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            if (password !== confirmPassword) {
+                alert('Mật khẩu xác nhận không khớp!');
+                return;
+            }
+
+            if (password.length < 8) {
+                alert('Mật khẩu phải có ít nhất 8 ký tự!');
+                return;
+            }
+
+            alert('Đăng ký thành công! Vui lòng chờ phê duyệt từ Super Admin.');
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>

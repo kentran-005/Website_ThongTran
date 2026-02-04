@@ -1,0 +1,26 @@
+.register-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--very-light-orange) 0%, var(--white) 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0 50px;
+}
+
+.register-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 2rem;
+}
+
+.register-shapes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Đăng Nhập - Website</title>
+        <link rel="stylesheet" href="../assets/style.css">
+        <link rel="stylesheet" href="../assets/login.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <img src="../assets/image/logo/FPT_Polytechnic.png"
+                        alt="logo FPT Polytechnic">
+
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="about.html">Giới Thiệu</a></li>
+                    <li><a href="activity.html">Hoạt Động</a></li>
+                    <li><a href="english_club.html">Câu Lạc Bộ</a></li>
+                    <li><a href="laboratory.html">Phòng Lab</a></li>
+                    <li><a href="library.html">Thư Viện</a></li>
+                    <li><a href="contact.html">Liên Hệ</a></li>
+                    <li><a href="login.html" class="btn-login active">Đăng
+                            Nhập</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <section class="login-section">
+            <div class="login-container">
+                <div class="form-container" style="max-width: 450px;">
+                    <div style="text-align: center; margin-bottom: 2rem;">
+                        <h1
+                            style="color: var(--text-dark); margin-bottom: 0.5rem;">Đăng
+                            Nhập</h1>
+                        <p style="color: var(--text-light);">Chào mừng bạn trở
+                            lại!</p>
+                    </div>
+
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="username">Tên Đăng Nhập hoặc
+                                Email</label>
+                            <input type="text" id="username" name="username"
+                                required
+                                placeholder="Nhập tên đăng nhập hoặc email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Mật Khẩu</label>
+                            <input type="password" id="password" name="password"
+                                required placeholder="Nhập mật khẩu">
+                        </div>
+
+                        <div class="form-group"
+                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                            <label
+                                style="display: flex; align-items: center; margin: 0; cursor: pointer;">
+                                <input type="checkbox" name="remember"
+                                    style="margin-right: 0.5rem; cursor: pointer;">
+                                <span>Ghi nhớ đăng nhập</span>
+                            </label>
+                            <a href="#"
+                                style="color: var(--primary-orange); text-decoration: none; font-size: 0.9rem;">Quên
+                                mật khẩu?</a>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Đăng
+                            Nhập</button>
+
+                        <div class="form-link">
+                            Chưa có tài khoản? <a href="register.html">Đăng ký
+                                ngay</a>
+                        </div>
+                    </form>
+
+                    <div
+                        style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #e0e0e0;">
+                        <p
+                            style="color: var(--text-light); margin-bottom: 1rem;">Hoặc
+                            đăng nhập bằng</p>
+                        <div
+                            style="display: flex; gap: 1rem; justify-content: center;">
+                            <button
+                                style="flex: 1; padding: 0.8rem; border: 2px solid #e0e0e0; background: white; border-radius: 10px; cursor: pointer; transition: all 0.3s;">
+                                📘 Facebook
+                            </button>
+                            <button
+                                style="flex: 1; padding: 0.8rem; border: 2px solid #e0e0e0; background: white; border-radius: 10px; cursor: pointer; transition: all 0.3s;">
+                                🔍 Google
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="login-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </section>
+
+        <script src="../assets/script.js"></script>
+    </body>
+</html>
