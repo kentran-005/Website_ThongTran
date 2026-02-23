@@ -1,0 +1,89 @@
+body {
+    font-family: Arial;
+    background: #f2f2f2;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product {
+    width: 25%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.product img {
+    width: 240px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.name {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.price {
+    color: #a40000;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* chatbox */
+
+.chat-container{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 280px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+    font-family: Arial;
+}
+
+
+.chat-header{
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.chat-body{
+    height: 180px;
+    padding: 10px;
+    overflow-y: auto;
+    background: #f7f7f7;
+}
+
+.chat-input{
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    outline: none;
+}
+
+.chat-input button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.chat-input button:hover {
+    background: #0056b3;
+}
